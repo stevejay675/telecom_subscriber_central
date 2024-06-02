@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+
+button, input{
+    outline: none;
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar{
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #142E6E;
+    height: 100%;
+    width: 22%;
+    gap: 50px;
+}
+
+
+
+.main-content{
+    width: 80%;
+   overflow: auto;
+    position: static;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.logo-text{
+    font-weight: 700;
+}
+
+.navbar .div{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navbar div i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    display: none;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .line1.active {
+    transform: rotate(45deg) translateY(5px);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .line2.active {
+    display: none;
+    transition: 0.5s;
+  }
+  
+  .line3.active {
+    transform: rotate(-45deg) translateY(-5px);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .hamburger-menu span {
+    background-color: black;
+    height: 2px;
+    width: 20px;
+  }
+
+.sidebar img{
+    width: 100px;
+    height: 100px;
+}
+
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.sidebar ul li{
+    list-style: none;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.summary, .graphs {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.summary h3, .graphs h3 {
+    margin-bottom: 10px;
+}
+
+/* Updated styles for summary section */
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.summary-item {
+    flex-basis: calc(33.33% - 10px); /* Adjust width for different screen sizes */
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-item i {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.summary-item p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.summary-item span {
+    font-weight: bold;
+    color: #C95142; /* Highlight color for data */
+}
+
+.graphs div img{
+    width: 300px;
+    height: 220px;
+
+}
+
+.graphs div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/**/
+
+.sub-container, .report{
+    padding: 20px;
+}
+
+form label{
+    margin-bottom: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    margin: 18px 0 0 0;
+}
+
+form div label{
+    margin-bottom: 10px;
+}
+
+form div input, select{
+    padding: 8px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+form button{
+    background-color: #142E6E;
+    color: white;
+    margin-top: 20px;
+    border: transparent;
+    outline: none;
+    width: 120px;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscriber-list, .service-list{
+    padding: 20px;
+    display: none;
+}
+
+.subscriber-list.active, .service-list.active{
+    display: block;
+}
+
+.see-sub, .see-service{
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #142E6E;
+    color: white;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+table a {
+    text-decoration: none;
+}
+
+.edit{
+    background-color: goldenrod;
+    color: black;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.delete{
+    background-color: rgb(224, 55, 55);
+    color: white;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+textarea{
+    border-radius: 5px;
+    min-height: 60px;
+    outline: none;
+    padding-left: 10px 10px;
+}
+
+
+@media screen  and (max-width: 650px){
+    .sidebar{
+        display: none;
+    }
+
+    .main-content{
+        width: 100%;
+    }
+
+    .summary-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .graphs div{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .graphs div img{
+        width: 100%;
+        height: auto;
+    }
+}
